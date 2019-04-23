@@ -12,6 +12,7 @@ public class DoorBlockTrigger : MonoBehaviour
         doorBlock.SetActive(false);
 
 
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,5 +20,7 @@ public class DoorBlockTrigger : MonoBehaviour
 
 
         doorBlock.SetActive(true);
+
+
     }
 }
