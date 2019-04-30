@@ -7,6 +7,7 @@ public class noPlatform : MonoBehaviour
     public GameObject magicLight;
     public Light stairLight;
     public GameObject platform;
+	public GameObject stairCol;
     public GameObject Timer;
     moveTimer Move;
    
@@ -15,6 +16,7 @@ public class noPlatform : MonoBehaviour
         magicLight.SetActive(false);
         Move = Timer.GetComponent<moveTimer>();
         Move.enabled = false;
+		stairCol.SetActive(false);
 
     }
 
@@ -24,5 +26,6 @@ public class noPlatform : MonoBehaviour
         magicLight.SetActive(true);
         stairLight.enabled = false;
         Move.enabled = true;
+		stairCol.SetActive(true);
     }
 }

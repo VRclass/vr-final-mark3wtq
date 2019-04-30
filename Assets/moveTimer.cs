@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class moveTimer : MonoBehaviour
 {
-    public float m_speed;
+    public float force;
+    public Rigidbody timer;
 
     void Start()
-{
-m_speed = 0.8f;
-
-}
-
-    void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * m_speed);
+        force = 0.5f;
+        timer = GetComponent<Rigidbody>();
+
+    }
+
+    private void FixedUpdate()
+    {
+        timer.AddForce(transform.forward * force);
     }
 }

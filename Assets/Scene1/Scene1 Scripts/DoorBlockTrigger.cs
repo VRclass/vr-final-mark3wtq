@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorBlockTrigger : MonoBehaviour
 {
     public GameObject doorBlock;
+	public GameObject filmSound;
 
 
     private void Start()
@@ -18,7 +19,7 @@ public class DoorBlockTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
+		filmSound.SetActive(false);
         doorBlock.SetActive(true);
 
 

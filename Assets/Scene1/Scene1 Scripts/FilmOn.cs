@@ -7,6 +7,7 @@ public class FilmOn : MonoBehaviour
     public Light onScreen;
     public Light onSeats;
     public GameObject timer;
+	public GameObject filmSound;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class FilmOn : MonoBehaviour
         onScreen.enabled = false;
         onSeats.enabled = false;
         timer.SetActive(false);
+		filmSound.SetActive(false);
         
     }
 
@@ -22,5 +24,6 @@ public class FilmOn : MonoBehaviour
         onScreen.enabled = true;
         onSeats.enabled = true;
         timer.SetActive(true);
+		filmSound.SetActive(true);
     }
 }
